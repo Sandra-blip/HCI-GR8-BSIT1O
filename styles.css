@@ -1,0 +1,176 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    position: fixed;
+    height: 100%;
+    background: linear-gradient(180deg, #8B5E3B, #6F4E37);
+    padding-top: 30px;
+    transition: 0.5s;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-title {
+    color: #fff;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.sidebar-title i {
+    margin-right: 8px;
+    color: gold;
+}
+
+/* Sidebar Nav */
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-nav li {
+    padding: 15px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.sidebar-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.sidebar-nav li a i {
+    margin-right: 12px;
+    font-size: 20px;
+    color: gold;
+    transition: 0.3s;
+}
+
+.sidebar-nav li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 35px;
+}
+
+.sidebar-nav li a:hover i {
+    transform: scale(1.2);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 260px;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    background: linear-gradient(to right, #8B5E3C, #6e4328);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.card {
+    transition: 0.3s;
+    border: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Collection Cards */
+.collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.collection-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.collection-info {
+    text-align: center;
+    padding: 15px;
+    background: white;
+}
+
+.collection-info h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.collection-info p {
+    color: #555;
+}
+
+.collection-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background: #6F4E37;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        overflow: hidden;
+    }
+    .sidebar.active {
+        width: 260px;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+    .collection-card {
+        margin-bottom: 15px;
+    }
+}
